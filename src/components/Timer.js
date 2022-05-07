@@ -4,13 +4,11 @@ import TimerInput from "./TimerInput";
 const Timer = () => {
   const [time, setTime] = useState("00:00");
   const [start, setStart] = useState(false);
-  let initialTime = null;
 
   const setTimerHandler = (minutes, seconds) => {
     minutes = (minutes.length === 1 ? `0${minutes}` : minutes) || "00";
     seconds = (seconds.length === 1 ? `0${seconds}` : seconds) || "00";
     setTime(`${minutes}:${seconds}`);
-    initialTime = `${minutes}:${seconds}`;
   };
 
   const startTimerHandler = () => {
@@ -56,7 +54,6 @@ const Timer = () => {
       <TimerInput onSetTimer={setTimerHandler} />
       <button onClick={startTimerHandler}>Start</button>
       <button onClick={pauseTimerHandler}>Pause</button>
-      {/* <button onClick={resetTimerHandler}>Reset</button> */}
       <div className="clock">
         <span>{time}</span>
       </div>

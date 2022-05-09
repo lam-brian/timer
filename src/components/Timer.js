@@ -52,8 +52,10 @@ const Timer = () => {
   return (
     <div className="timer">
       <TimerInput onSetTimer={setTimerHandler} />
-      <button onClick={startTimerHandler}>Start</button>
-      <button onClick={pauseTimerHandler}>Pause</button>
+      <div className="btns">
+        <button onClick={startTimerHandler}>Start</button>
+        <button onClick={pauseTimerHandler}>Pause</button>
+      </div>
       <div className="clock">
         <span>{time}</span>
       </div>

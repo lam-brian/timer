@@ -34,6 +34,17 @@ body {
   justify-content: center;
 }
 
+.btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.btns button {
+  width: 9.6rem;
+}
+
 .clock {
   margin-top: 1.6rem;
   font-size: 3.2rem;
